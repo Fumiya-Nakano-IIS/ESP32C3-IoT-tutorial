@@ -1,0 +1,119 @@
+/* style.css - merged and simplified for ESP32C3 UI */
+
+/* Color Variables */
+:root {
+    --color-key-l1: #2d8b44;
+    --color-key-n0: #51bb6c;
+    --color-key-d1: #16773e;
+    --color-key-cont: #900F12;
+    --color-key-cont-d1: #740c0e;
+    --color-bg: #aaaaaa;
+    --color-body: #4b4b4b;
+    --color-bg-l1: #cecece;
+    --color-bg-l2: #fafafa;
+}
+
+/* Reset and base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-body);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    max-width: 400px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    background-color: var(--color-bg-l1);
+}
+
+/* Headings */
+h2,
+h3 {
+    text-align: center;
+    margin-top: 0.5em;
+    color: var(--color-body);
+}
+
+/* Form elements */
+label {
+    display: block;
+    margin: 0.5em 0 0.2em 0;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--color-bg-l1);
+    border-radius: 4px;
+    background-color: var(--color-bg-l2);
+    color: var(--color-body);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-key-l1);
+}
+
+/* Buttons */
+button {
+    background: var(--color-key-n0);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em;
+    margin: 0.5em 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background: var(--color-key-d1);
+}
+
+button:active {
+    background: var(--color-key-cont);
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+    .container {
+        max-width: 98vw;
+        margin: 0.5em;
+        padding: 1em;
+    }
+
+    h2,
+    h3 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.95em;
+        padding: 0.6em;
+    }
+
+    input[type="number"] {
+        font-size: 1em;
+    }
+}

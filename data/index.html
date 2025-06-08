@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ESP32C3 Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>ESP32C3 Servo</h2>
+        <div style="text-align:center; margin-bottom:1em;">
+            <span style="font-size:0.95em; color:#555;">
+                LED GPIO: <b id="ledPin">-</b> &nbsp;|&nbsp; Servo GPIO: <b id="servoPin">-</b>
+            </span>
+        </div>
+        <h3>Manual</h3>
+        <div>
+            <button id="onBtn">ON</button>
+            <button id="offBtn">OFF</button>
+        </div>
+        <h3>Servo Positions</h3>
+        <label>ON: <span id="onVal">90</span>deg</label>
+        <input id="onSlider" type="range" min="0" max="180" value="90">
+        <label>OFF: <span id="offVal">0</span>deg</label>
+        <input id="offSlider" type="range" min="0" max="180" value="0">
+        <button id="updateServoPosBtn">Save Positions</button>
+        <h3>Timer</h3>
+        <label>Enable: <input id="timerEnable" type="checkbox"></label>
+        <label>Interval (ms): <input id="timerInterval" type="number" value="1000"></label>
+        <button id="updateTimerBtn">Save Timer</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
